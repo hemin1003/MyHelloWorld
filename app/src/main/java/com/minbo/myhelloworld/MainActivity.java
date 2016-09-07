@@ -1,11 +1,18 @@
 package com.minbo.myhelloworld;
 
+import android.Manifest;
+import android.content.ContentProviderOperation;
+import android.content.ContentResolver;
 import android.content.Intent;
+import android.content.OperationApplicationException;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.media.Image;
 import android.os.Handler;
 import android.os.Message;
+import android.os.RemoteException;
+import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.ListViewCompat;
@@ -128,7 +135,7 @@ public class MainActivity extends AppCompatActivity {
         //第十种，十一
         //setContentView(R.layout.main_list);
         setContentView(R.layout.main_toast);
-        Log.e("info","999");
+        Log.i("info","999");
 
         btn_toast = (Button) findViewById(R.id.btn_toast);
         btn_toast.setOnClickListener(new Button.OnClickListener(){
@@ -151,6 +158,62 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button btn_shared = (Button) findViewById(R.id.btn_shared);
+        btn_shared.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, TestShared.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btn_sqlite = (Button) findViewById(R.id.btn_sqlite);
+        btn_sqlite.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, TestSqlite.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btn_contentProvider = (Button) findViewById(R.id.btn_contentProvider);
+        btn_contentProvider.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, TestContentProvider.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btn_textLinkfy = (Button) findViewById(R.id.btn_textLinkfy);
+        btn_textLinkfy.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, TestLinkfy.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btn_textVibrate = (Button) findViewById(R.id.btn_textVibrate);
+        btn_textVibrate.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, TestVibrate.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btn_Call = (Button) findViewById(R.id.btn_Call);
+        btn_Call.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, TestCall.class);
+                startActivity(intent);
+            }
+        });
+
+
 
 //        //第九种
 //        setContentView(R.layout.main_menu);
@@ -300,7 +363,7 @@ public class MainActivity extends AppCompatActivity {
 //        imageView1.setImageDrawable(getResources().getDrawable(R.drawable.a));
 //        imageView2.setImageDrawable(getResources().getDrawable(R.drawable.b));
 
-        //第一种
+        //第三种
 //        setContentView(R.layout.activity_main);
 //        t = (TextView) findViewById(R.id.textView2);
 //        t.setText("hemin123");

@@ -18,4 +18,35 @@
         android:layout_height="wrap_content"
         android:text="Test Spinner"
         android:id="@+id/btn_spinner"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Test SharedPreferences"
+        android:id="@+id/btn_shared"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Test Sqlite"
+        android:id="@+id/btn_sqlite"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Test Content Provider"
+        android:id="@+id/btn_contentProvider"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Test Linkfy"
+        android:id="@+id/btn_textLinkfy"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Test Vibrate"
+        android:id="@+id/btn_textVibrate"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Test Call"
+        android:id="@+id/btn_Call"/>
+
 </LinearLayout>
