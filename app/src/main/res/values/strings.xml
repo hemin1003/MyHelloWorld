@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MyHelloWorld</string>
+    <string name="dialog_title">MyDialog</string>
+    <string name="dialog_body">电池容量</string>
 </resources>

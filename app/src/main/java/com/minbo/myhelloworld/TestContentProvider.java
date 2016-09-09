@@ -1,9 +1,11 @@
 package com.minbo.myhelloworld;
 
 import android.Manifest;
+import android.annotation.TargetApi;
 import android.content.ContentProviderOperation;
 import android.content.ContentResolver;
 import android.content.OperationApplicationException;
+import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.os.RemoteException;
@@ -31,10 +33,27 @@ public class TestContentProvider extends AppCompatActivity {
         int currentapiVersion=android.os.Build.VERSION.SDK_INT;
         Log.i("version", "当前android api版本号=" + currentapiVersion + "");
 
+        this.getVersion();
+
         if(currentapiVersion>22) {
             this.myRequestPermission();
         }else{
             this.showDetails();
+        }
+    }
+
+    /**
+     * 获取版本号
+     * @return 当前应用的版本号
+     */
+    public void getVersion() {
+        try {
+            PackageManager manager = this.getPackageManager();
+            PackageInfo info = manager.getPackageInfo(this.getPackageName(), 0);
+            String version = info.versionName;
+            Log.i("version", "当前应用的版本号=" + version + "");
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
@@ -45,14 +64,14 @@ public class TestContentProvider extends AppCompatActivity {
             //if (c.moveToFirst()){
             //取联系人姓名
             int nameIndex = c.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME);
-            Log.i("content:name", c.getString(nameIndex));
+            Log.i("contact:name", c.getString(nameIndex));
             //查联系人手机号码
             String contactId = c.getString(c.getColumnIndex(ContactsContract.Contacts._ID));
             Cursor c2 = resolver.query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI, null,
                     ContactsContract.CommonDataKinds.Phone.CONTACT_ID + " = " + contactId, null, null);
             while(c2.moveToNext()){
                 String phone = c2.getString(c2.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
-                Log.i("content:phone", phone);
+                Log.i("contact:phone", phone);
 
             }
         }
@@ -60,6 +79,7 @@ public class TestContentProvider extends AppCompatActivity {
 
     final private int REQUEST_CODE_ASK_PERMISSIONS = 123;
 
+    @TargetApi(23)
     private void myRequestPermission() {
         int hasWriteContactsPermission = checkSelfPermission(Manifest.permission.WRITE_CONTACTS);
         if (hasWriteContactsPermission != PackageManager.PERMISSION_GRANTED) {

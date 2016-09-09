@@ -5,6 +5,41 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="Test Sms Status"
+        android:id="@+id/btn_SmsStatus"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Test Call Info"
+        android:id="@+id/btn_CallInfo"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Test Battery"
+        android:id="@+id/btn_Battery"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Test Sms"
+        android:id="@+id/btn_Sms"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Test Newwork"
+        android:id="@+id/btn_Newwork"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Test LinearLayout"
+        android:id="@+id/btn_LinearLayout"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Test ImageView"
+        android:id="@+id/btn_ImageView"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="10px"
         android:text="Test Toast"
         android:id="@+id/btn_toast"/>

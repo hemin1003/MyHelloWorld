@@ -130,12 +130,20 @@ public class MainActivity extends AppCompatActivity {
     private Button btn_spinner;
 
     @Override
+    public void onBackPressed() {
+        // TODO Auto-generated method stub
+//      super.onBackPressed();
+        //这个方法是在返回键按下时，调用，其内部实际也是调用了finish()方法；
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //第十种，十一
         //setContentView(R.layout.main_list);
+        //getSupportActionBar().hide();
         setContentView(R.layout.main_toast);
-        Log.i("info","999");
+        Log.i("MainActivity info","999");
 
         btn_toast = (Button) findViewById(R.id.btn_toast);
         btn_toast.setOnClickListener(new Button.OnClickListener(){
@@ -213,7 +221,68 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button btn_ImageView = (Button) findViewById(R.id.btn_ImageView);
+        btn_ImageView.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, TestImageView.class);
+                startActivity(intent);
+            }
+        });
 
+        Button btn_LinearLayout = (Button) findViewById(R.id.btn_LinearLayout);
+        btn_LinearLayout.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, TestLinearLayout.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btn_Newwork = (Button) findViewById(R.id.btn_Newwork);
+        btn_Newwork.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, TestNetwork.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btn_Sms = (Button) findViewById(R.id.btn_Sms);
+        btn_Sms.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, TestSms.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btn_Battery = (Button) findViewById(R.id.btn_Battery);
+        btn_Battery.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, TestBattery.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btn_CallInfo = (Button) findViewById(R.id.btn_CallInfo);
+        btn_CallInfo.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, TestCallInfo.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btn_SmsStatus = (Button) findViewById(R.id.btn_SmsStatus);
+        btn_SmsStatus.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, TestSmsStatus.class);
+                startActivity(intent);
+            }
+        });
 
 //        //第九种
 //        setContentView(R.layout.main_menu);
