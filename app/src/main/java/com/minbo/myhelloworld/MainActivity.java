@@ -21,6 +21,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.AnalogClock;
 import android.widget.ArrayAdapter;
@@ -40,6 +41,9 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
+
+import com.minbo.myhelloworld.internet_demo.TestGallery;
+import com.minbo.myhelloworld.internet_demo.TestWebView;
 
 import org.w3c.dom.Text;
 
@@ -141,8 +145,37 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         //第十种，十一
         //setContentView(R.layout.main_list);
+
+        /**
+         * 全屏显示
+         */
+        /***
+         * 这是隐藏标题栏
+         */
         //getSupportActionBar().hide();
+        /***
+         * 添加全屏显示的标识位,默认情况下，添加全屏标识位并不会将标题栏隐藏掉，
+         * 所以在添加全屏标识位之前，我们已提前将标题栏予以隐藏
+         */
+        //getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
+        /**
+         * 取消全屏显示（注意：下面这一部分已注释掉了，看代码时，注意看）
+         */
+        /**
+         * 这是显示标题栏
+         * */
+        //getSupportActionBar().show();
+        /**
+         * 这是清除全屏显示标识位
+         */
+        //getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+        //状态栏透明
+        //getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+
         setContentView(R.layout.main_toast);
+
         Log.i("MainActivity info","999");
 
         btn_toast = (Button) findViewById(R.id.btn_toast);
@@ -280,6 +313,24 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, TestSmsStatus.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btn_WebView = (Button) findViewById(R.id.btn_WebView);
+        btn_WebView.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, TestWebView.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btn_Gallery = (Button) findViewById(R.id.btn_Gallery);
+        btn_Gallery.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, TestGallery.class);
                 startActivity(intent);
             }
         });

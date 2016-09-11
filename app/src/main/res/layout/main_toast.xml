@@ -5,6 +5,16 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="Test Gallery"
+        android:id="@+id/btn_Gallery"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Test WebView"
+        android:id="@+id/btn_WebView"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:text="Test Sms Status"
         android:id="@+id/btn_SmsStatus"/>
     <Button
