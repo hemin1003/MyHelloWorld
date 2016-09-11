@@ -1,60 +1,67 @@
 package com.minbo.myhelloworld;
 
-import android.Manifest;
-import android.content.ContentProviderOperation;
-import android.content.ContentResolver;
+
+
 import android.content.Intent;
-import android.content.OperationApplicationException;
-import android.content.pm.PackageManager;
-import android.graphics.Color;
-import android.graphics.Typeface;
-import android.media.Image;
 import android.os.Handler;
-import android.os.Message;
-import android.os.RemoteException;
-import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.ListViewCompat;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.WindowManager;
-import android.widget.AdapterView;
-import android.widget.AnalogClock;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.SimpleAdapter;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
-import com.minbo.myhelloworld.internet_demo.TestGallery;
-import com.minbo.myhelloworld.internet_demo.TestWebView;
+import com.minbo.myhelloworld.database.TestContentProvider;
+import com.minbo.myhelloworld.database.TestShared;
+import com.minbo.myhelloworld.database.TestSqlite;
+import com.minbo.myhelloworld.layout.TestLinearLayout;
+import com.minbo.myhelloworld.network.TestGallery;
+import com.minbo.myhelloworld.network.TestNetwork;
+import com.minbo.myhelloworld.network.TestWebView;
+import com.minbo.myhelloworld.phone.TestBattery;
+import com.minbo.myhelloworld.phone.TestSms;
+import com.minbo.myhelloworld.phone.TestSmsStatus;
+import com.minbo.myhelloworld.phone.TestTouchToCall;
+import com.minbo.myhelloworld.phone.TestCallStatus;
+import com.minbo.myhelloworld.phone.TestVibrate;
+import com.minbo.myhelloworld.widget.TestImageView;
+import com.minbo.myhelloworld.widget.TestLinkfy;
+import com.minbo.myhelloworld.widget.TestSpinner;
 
-import org.w3c.dom.Text;
-
-import java.io.File;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.HashMap;
-import java.util.List;
-
-import javax.xml.datatype.Duration;
-
+/** Android Study Plan
+ //        1. 相对布局
+ //        2. Intent
+ //        3. Service
+ //        4. Handle
+ //        5. Fragment
+ //        6. 常用功能实现
+ //          a. APP图标
+ //          b. 引导页
+ //          c. 动态图或者视频显示
+ //          d. 菜单侧滑
+ //          e. 图片轮播
+ //          f. 下拉刷新、上拉加载
+ //          g. 应用监控
+ //          h. 应用签名
+ //          i. 应用安全
+ //          j. 在线更新
+ //          k. SDCard操作
+ //          m. 手势密码
+ //          n. 百度地图
+ //        7. 常用Android API使用（如取联系人, 取短信, 打电话, 发邮件, 播放音乐等）
+ //        8. 常用第三方库使用（如gson, fastjson, 图标, okhttp等）
+ */
 public class MainActivity extends AppCompatActivity {
     private int count = 0;
     private TextView t;
@@ -184,10 +191,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 setTitle("使用Toast");
                 Toast.makeText(MainActivity.this, "Test", Toast.LENGTH_SHORT).show();
-
-                //跳转Activity
-                //Intent intent = new Intent(MainActivity.this, Main2Activity.class);
-                //startActivity(intent);
             }
         });
 
@@ -249,7 +252,7 @@ public class MainActivity extends AppCompatActivity {
         btn_Call.setOnClickListener(new Button.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, TestCall.class);
+                Intent intent = new Intent(MainActivity.this, TestTouchToCall.class);
                 startActivity(intent);
             }
         });
@@ -303,7 +306,7 @@ public class MainActivity extends AppCompatActivity {
         btn_CallInfo.setOnClickListener(new Button.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, TestCallInfo.class);
+                Intent intent = new Intent(MainActivity.this, TestCallStatus.class);
                 startActivity(intent);
             }
         });

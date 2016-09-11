@@ -1,4 +1,4 @@
-package com.minbo.myhelloworld;
+package com.minbo.myhelloworld.phone;
 
 import android.app.Dialog;
 import android.content.BroadcastReceiver;
@@ -12,6 +12,8 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.minbo.myhelloworld.R;
 
 public class TestBattery extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.minbo.myhelloworld;
+package com.minbo.myhelloworld.phone;
 
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
@@ -12,6 +12,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import com.minbo.myhelloworld.R;
 
 public class TestSmsStatus extends AppCompatActivity {
 

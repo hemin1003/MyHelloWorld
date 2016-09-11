@@ -1,4 +1,4 @@
-package com.minbo.myhelloworld;
+package com.minbo.myhelloworld.phone;
 
 import android.content.ContentResolver;
 import android.content.Context;
@@ -11,9 +11,11 @@ import android.telephony.PhoneStateListener;
 import android.telephony.TelephonyManager;
 import android.widget.TextView;
 
+import com.minbo.myhelloworld.R;
+
 import org.w3c.dom.Text;
 
-public class TestCallInfo extends AppCompatActivity {
+public class TestCallStatus extends AppCompatActivity {
 
     TextView myTextViewInfo;
     TextView myTextViewInfo2;

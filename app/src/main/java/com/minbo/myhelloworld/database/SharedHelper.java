@@ -1,4 +1,4 @@
-package com.minbo.myhelloworld;
+package com.minbo.myhelloworld.database;
 
 import android.content.Context;
 import android.content.SharedPreferences;

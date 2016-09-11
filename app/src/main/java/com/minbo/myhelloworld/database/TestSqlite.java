@@ -1,4 +1,4 @@
-package com.minbo.myhelloworld;
+package com.minbo.myhelloworld.database;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+
+import com.minbo.myhelloworld.R;
 
 public class TestSqlite extends AppCompatActivity {
 

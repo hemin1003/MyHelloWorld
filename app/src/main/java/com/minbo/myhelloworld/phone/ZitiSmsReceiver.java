@@ -1,12 +1,13 @@
-package com.minbo.myhelloworld;
+package com.minbo.myhelloworld.phone;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.telephony.SmsManager;
 import android.telephony.SmsMessage;
 import android.widget.Toast;
+
+import com.minbo.myhelloworld.phone.TestSms;
 
 /**
  * Created by Administrator on 2016/9/8.

@@ -1,9 +1,10 @@
-package com.minbo.myhelloworld;
+package com.minbo.myhelloworld.broadcast;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
+
+import com.minbo.myhelloworld.phone.TestSmsStatus;
 
 /**
  * Created by Administrator on 2016/9/9.

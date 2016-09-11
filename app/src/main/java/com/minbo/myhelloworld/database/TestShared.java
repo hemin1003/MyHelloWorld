@@ -1,12 +1,14 @@
-package com.minbo.myhelloworld;
+package com.minbo.myhelloworld.database;
 
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
+import com.minbo.myhelloworld.R;
+
 /**
  * Created by Administrator on 2016/9/7.
+ * 使用SharedPreferences存储
  */
 public class TestShared extends AppCompatActivity {
     @Override

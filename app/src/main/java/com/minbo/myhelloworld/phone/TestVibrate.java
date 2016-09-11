@@ -1,4 +1,4 @@
-package com.minbo.myhelloworld;
+package com.minbo.myhelloworld.phone;
 
 import android.app.Service;
 import android.os.Vibrator;
@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 import android.widget.ToggleButton;
+
+import com.minbo.myhelloworld.R;
 
 public class TestVibrate extends AppCompatActivity {
 

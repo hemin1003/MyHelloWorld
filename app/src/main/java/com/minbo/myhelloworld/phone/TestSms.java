@@ -1,8 +1,10 @@
-package com.minbo.myhelloworld;
+package com.minbo.myhelloworld.phone;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
+
+import com.minbo.myhelloworld.R;
 
 public class TestSms extends AppCompatActivity {
 

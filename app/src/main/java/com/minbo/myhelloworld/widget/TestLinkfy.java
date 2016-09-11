@@ -1,4 +1,4 @@
-package com.minbo.myhelloworld;
+package com.minbo.myhelloworld.widget;
 
 import android.app.PendingIntent;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +8,8 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.minbo.myhelloworld.R;
 
 public class TestLinkfy extends AppCompatActivity {
 

@@ -1,7 +1,9 @@
-package com.minbo.myhelloworld;
+package com.minbo.myhelloworld.layout;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.minbo.myhelloworld.R;
 
 public class TestLinearLayout extends AppCompatActivity {
 

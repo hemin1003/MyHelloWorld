@@ -1,4 +1,4 @@
-package com.minbo.myhelloworld.internet_demo;
+package com.minbo.myhelloworld.network;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -11,8 +11,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.minbo.myhelloworld.R;
-
-import java.net.URL;
 
 public class TestWebView extends AppCompatActivity {
 

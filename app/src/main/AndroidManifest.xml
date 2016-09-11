@@ -20,7 +20,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <receiver android:name=".BootReceiver">
+        <receiver android:name=".broadcast.BootReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
@@ -40,23 +40,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Main2Activity" />
-        <activity android:name=".TestSpinner" />
-        <activity android:name=".TestShared" />
-        <activity android:name=".TestSqlite" />
-        <activity android:name=".TestContentProvider" />
-        <activity android:name=".TestLinkfy" />
-        <activity android:name=".TestVibrate" />
-        <activity android:name=".TestCall" />
-        <activity android:name=".TestImageView" />
-        <activity android:name=".TestLinearLayout" />
-        <activity android:name=".TestNetwork" />
-        <activity android:name=".TestSms" />
-        <activity android:name=".TestBattery" />
-        <activity android:name=".TestCallInfo" />
-        <activity android:name=".TestSmsStatus" />
-        <activity android:name=".internet_demo.TestWebView" />
-        <activity android:name=".internet_demo.TestGallery"></activity>
+        <activity android:name=".widget.TestSpinner" />
+        <activity android:name=".database.TestShared" />
+        <activity android:name=".database.TestSqlite" />
+        <activity android:name=".database.TestContentProvider" />
+        <activity android:name=".widget.TestLinkfy" />
+        <activity android:name=".phone.TestVibrate" />
+        <activity android:name=".phone.TestTouchToCall" />
+        <activity android:name=".widget.TestImageView" />
+        <activity android:name=".layout.TestLinearLayout" />
+        <activity android:name=".network.TestNetwork" />
+        <activity android:name=".phone.TestSms" />
+        <activity android:name=".phone.TestBattery" />
+        <activity android:name=".phone.TestCallStatus" />
+        <activity android:name=".phone.TestSmsStatus" />
+        <activity android:name=".network.TestWebView" />
+        <activity android:name=".network.TestGallery"></activity>
     </application>
 
 </manifest>

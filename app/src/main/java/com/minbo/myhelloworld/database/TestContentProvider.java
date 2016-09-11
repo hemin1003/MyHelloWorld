@@ -1,27 +1,18 @@
-package com.minbo.myhelloworld;
+package com.minbo.myhelloworld.database;
 
 import android.Manifest;
 import android.annotation.TargetApi;
-import android.content.ContentProviderOperation;
 import android.content.ContentResolver;
-import android.content.OperationApplicationException;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
-import android.os.RemoteException;
-import android.provider.Contacts;
 import android.provider.ContactsContract;
-import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.test.mock.MockPackageManager;
 import android.util.Log;
-import android.widget.ListAdapter;
-import android.widget.SimpleAdapter;
-import android.widget.SimpleCursorAdapter;
 import android.widget.Toast;
 
-import java.util.ArrayList;
+import com.minbo.myhelloworld.R;
 
 public class TestContentProvider extends AppCompatActivity {
 
