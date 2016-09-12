@@ -13,7 +13,6 @@
     <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -55,7 +54,8 @@
         <activity android:name=".phone.TestCallStatus" />
         <activity android:name=".phone.TestSmsStatus" />
         <activity android:name=".network.TestWebView" />
-        <activity android:name=".network.TestGallery"></activity>
+        <activity android:name=".network.TestGallery" />
+        <activity android:name=".fragment.TestFragment"></activity>
     </application>
 
 </manifest>

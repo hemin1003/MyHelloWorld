@@ -25,6 +25,7 @@ import android.widget.Toast;
 import com.minbo.myhelloworld.database.TestContentProvider;
 import com.minbo.myhelloworld.database.TestShared;
 import com.minbo.myhelloworld.database.TestSqlite;
+import com.minbo.myhelloworld.fragment.TestFragment;
 import com.minbo.myhelloworld.layout.TestLinearLayout;
 import com.minbo.myhelloworld.network.TestGallery;
 import com.minbo.myhelloworld.network.TestNetwork;
@@ -334,6 +335,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, TestGallery.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btn_Fragment = (Button) findViewById(R.id.btn_Fragment);
+        btn_Fragment.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, TestFragment.class);
                 startActivity(intent);
             }
         });

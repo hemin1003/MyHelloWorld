@@ -2,4 +2,7 @@
     <string name="app_name">MyHelloWorld</string>
     <string name="dialog_title">MyDialog</string>
     <string name="dialog_body">电池容量</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
