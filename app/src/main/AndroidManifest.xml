@@ -55,7 +55,8 @@
         <activity android:name=".phone.TestSmsStatus" />
         <activity android:name=".network.TestWebView" />
         <activity android:name=".network.TestGallery" />
-        <activity android:name=".fragment.TestFragment"></activity>
+        <activity android:name=".fragment.TestFragment" />
+        <activity android:name=".widget.TestDailog" />
     </application>
 
 </manifest>

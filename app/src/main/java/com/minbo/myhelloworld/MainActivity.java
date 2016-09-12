@@ -36,6 +36,7 @@ import com.minbo.myhelloworld.phone.TestSmsStatus;
 import com.minbo.myhelloworld.phone.TestTouchToCall;
 import com.minbo.myhelloworld.phone.TestCallStatus;
 import com.minbo.myhelloworld.phone.TestVibrate;
+import com.minbo.myhelloworld.widget.TestDailog;
 import com.minbo.myhelloworld.widget.TestImageView;
 import com.minbo.myhelloworld.widget.TestLinkfy;
 import com.minbo.myhelloworld.widget.TestSpinner;
@@ -343,7 +344,15 @@ public class MainActivity extends AppCompatActivity {
         btn_Fragment.setOnClickListener(new Button.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, TestFragment.class);
+                Intent intent = new Intent(MainActivity.this, TestFragment.class); startActivity(intent);
+            }
+        });
+
+        Button btn_TestDailog = (Button) findViewById(R.id.btn_TestDailog);
+        btn_TestDailog.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, TestDailog.class);
                 startActivity(intent);
             }
         });
