@@ -48,14 +48,14 @@ import com.minbo.myhelloworld.widget.TestSpinner;
  //        4. Handle
  //        5. Fragment
  //        6. 常用功能实现
- //          a. APP图标
+ //          a. APP图标Logo
  //          b. 引导页
- //          c. 动态图或者视频显示
+ //          c. 主页动态图或者视频显示
  //          d. 菜单侧滑
- //          e. 图片轮播
+ //          e. 图片轮播                    OK
  //          f. 下拉刷新、上拉加载
  //          g. 应用监控
- //          h. 应用签名
+ //          h. 应用签名                    OK
  //          i. 应用安全
  //          j. 在线更新
  //          k. SDCard操作

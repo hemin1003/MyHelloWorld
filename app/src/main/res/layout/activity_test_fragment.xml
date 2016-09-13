@@ -15,11 +15,31 @@
         android:layout_height="wrap_content"
         android:text="hello fragment"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Test"
-        android:id="@+id/btnAddFragment"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Product"
+            android:id="@+id/btnProduct"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SIT"
+            android:id="@+id/btnSit"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UAT"
+            android:id="@+id/btnUat"/>
+
+        </LinearLayout>
 
     <LinearLayout
         android:id="@+id/bottomLayout"

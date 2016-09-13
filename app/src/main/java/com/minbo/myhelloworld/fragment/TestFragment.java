@@ -6,15 +6,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.minbo.myhelloworld.R;
 
-public class TestFragment extends AppCompatActivity {
+public class TestFragment extends AppCompatActivity implements View.OnClickListener{
 
-    private Button btnAddFragment;
-    private LinearLayout bottomLayout;
+
+    private Button btnProduct;
+    private Button btnSit;
+    private Button btnUat;
+
+
     private FragmentManager fragmentManager;
     private FragmentTransaction fragmentTransaction;
 
@@ -23,23 +26,45 @@ public class TestFragment extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test_fragment);
 
-        btnAddFragment = (Button) findViewById(R.id.btnAddFragment);
-        bottomLayout = (LinearLayout) findViewById(R.id.bottomLayout);
+        btnProduct = (Button) findViewById(R.id.btnProduct);
+        btnSit = (Button) findViewById(R.id.btnSit);
+        btnUat = (Button) findViewById(R.id.btnUat);
+
         fragmentManager = getFragmentManager();
+
+        btnProduct.setOnClickListener(this);
+        btnSit.setOnClickListener(this);
+        btnUat.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        Toast.makeText(TestFragment.this, "Click", Toast.LENGTH_SHORT).show();
         fragmentTransaction = fragmentManager.beginTransaction();
 
-        btnAddFragment.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        switch(v.getId()){
 
-                FirstFragment fragment = new FirstFragment();
-                fragmentTransaction.add(R.id.bottomLayout, fragment);
-                fragmentTransaction.commit();
+            case R.id.btnProduct:
+                Toast.makeText(TestFragment.this, "Click btnProduct", Toast.LENGTH_SHORT).show();
+                FirstFragment1 fragment1 = new FirstFragment1();
+                fragmentTransaction.replace(R.id.bottomLayout, fragment1, "fragment1");
+                fragmentTransaction.addToBackStack("fragment1");
+                break;
 
-                Button button = (Button) fragment.getActivity().findViewById(R.id.button);
+            case R.id.btnSit:
+                Toast.makeText(TestFragment.this, "Click btnSit", Toast.LENGTH_SHORT).show();
+                FirstFragment2 fragment2 = new FirstFragment2();
+                fragmentTransaction.replace(R.id.bottomLayout, fragment2, "fragment2");
+                fragmentTransaction.addToBackStack("fragment2");
+                break;
 
-                Toast.makeText(TestFragment.this, button.getText(), Toast.LENGTH_SHORT).show();
-            }
-        });
+            case R.id.btnUat:
+                Toast.makeText(TestFragment.this, "Click btnUat", Toast.LENGTH_SHORT).show();
+                FirstFragment3 fragment3 = new FirstFragment3();
+                fragmentTransaction.replace(R.id.bottomLayout, fragment3, "fragment3");
+                fragmentTransaction.addToBackStack("fragment3");
+                break;
+        }
+        fragmentTransaction.commit();
     }
 }
