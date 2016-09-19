@@ -2,6 +2,19 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Test Animation"
+        android:id="@+id/btn_Animation"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Test Async"
+        android:id="@+id/btn_Async"/>
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

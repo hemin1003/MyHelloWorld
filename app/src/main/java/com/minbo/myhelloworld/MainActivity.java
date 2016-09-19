@@ -22,6 +22,7 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import com.minbo.myhelloworld.async.TestAsync;
 import com.minbo.myhelloworld.database.TestContentProvider;
 import com.minbo.myhelloworld.database.TestShared;
 import com.minbo.myhelloworld.database.TestSqlite;
@@ -36,6 +37,7 @@ import com.minbo.myhelloworld.phone.TestSmsStatus;
 import com.minbo.myhelloworld.phone.TestTouchToCall;
 import com.minbo.myhelloworld.phone.TestCallStatus;
 import com.minbo.myhelloworld.phone.TestVibrate;
+import com.minbo.myhelloworld.widget.TestAnimation;
 import com.minbo.myhelloworld.widget.TestDailog;
 import com.minbo.myhelloworld.widget.TestImageView;
 import com.minbo.myhelloworld.widget.TestLinkfy;
@@ -353,6 +355,24 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, TestDailog.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btn_Async = (Button) findViewById(R.id.btn_Async);
+        btn_Async.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, TestAsync.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btn_Animation = (Button) findViewById(R.id.btn_Animation);
+        btn_Animation.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, TestAnimation.class);
                 startActivity(intent);
             }
         });
