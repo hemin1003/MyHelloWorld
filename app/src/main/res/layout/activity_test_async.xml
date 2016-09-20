@@ -22,8 +22,8 @@
         android:id="@+id/btnDownload"/>
 
     <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
         android:id="@+id/myImageView"/>
 
 </LinearLayout>

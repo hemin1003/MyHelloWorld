@@ -111,7 +111,7 @@ public class TestAsync extends AppCompatActivity {
         protected void onPostExecute(Object o) {
             super.onPostExecute(o);
 
-            myImageView.setBackgroundColor(Color.BLUE);
+            myImageView.setImageResource(R.drawable.girl);
 
 //            myImageView.setImageBitmap(BitmapFactory.decodeByteArray(o.toString().getBytes(), 0,
 //                    o.toString().getBytes().length));

@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="来自Activity传递的id值"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/myTextView1" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入值"
+        android:id="@+id/myEditText1"/>
+
+    <Button
+        android:id="@+id/btnGetValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="获取Activity的值"/>
+
+    <Button
+        android:id="@+id/btnFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="传递Fragment的值到Fragment"/>
+
+    <Button
+        android:id="@+id/btnRightValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="获取右边Fragment里面的值"/>
+
+</LinearLayout>
