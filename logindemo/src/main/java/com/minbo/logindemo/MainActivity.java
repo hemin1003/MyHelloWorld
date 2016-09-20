@@ -1,5 +1,6 @@
 package com.minbo.logindemo;
 
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -40,6 +41,14 @@ public class MainActivity extends AppCompatActivity {
                 }else{
                     Toast.makeText(MainActivity.this, "用户名或密码错误.", Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+
+        FloatingActionButton myfloat = (FloatingActionButton) findViewById(R.id.myfloat);
+        myfloat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(MainActivity.this, "点我干嘛.", Toast.LENGTH_SHORT).show();
             }
         });
     }

@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="30dp"
     tools:context="com.minbo.logindemo.MainActivity">
 
@@ -29,7 +30,8 @@
         android:layout_below="@+id/username"
         android:id="@+id/password"
         android:hint="password"
-        android:inputType="textPassword"/>
+        android:inputType="textPassword">
+    </EditText>
 
     <Button
         android:layout_width="wrap_content"
@@ -46,5 +48,18 @@
         android:text="确定"
         android:layout_toLeftOf="@+id/cancelBtn"
         android:layout_below="@+id/password"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/myfloat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:src="@android:drawable/ic_input_add"
+        app:rippleColor="#CCCCCC"
+        app:backgroundTint="#CCCCCC"
+        app:elevation="6dp"
+        app:pressedTranslationZ="2dp"/>
 
 </RelativeLayout>
