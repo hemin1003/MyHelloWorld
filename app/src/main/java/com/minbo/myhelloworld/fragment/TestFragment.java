@@ -88,7 +88,7 @@ public class TestFragment extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.btnLeft:
-                //使用接口回调的方式获取left fragment里面的值
+                //使用接口回调的方式在Activity获取left fragment里面的值
                 //注意：使用Manager寻找已初始化的Fragment，而不是重新实例化一个
                 LeftFragment left = (LeftFragment) fragmentManager.findFragmentByTag("left");
                 left.getEditText(new LeftFragment.CallBack() {

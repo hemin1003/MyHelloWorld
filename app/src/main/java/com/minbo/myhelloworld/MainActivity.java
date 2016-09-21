@@ -44,16 +44,16 @@ import com.minbo.myhelloworld.widget.TestLinkfy;
 import com.minbo.myhelloworld.widget.TestSpinner;
 
 /** Android Study Plan
- //        1. 相对布局
+ //        1. 相对布局                      OK
  //        2. Intent
  //        3. Service
  //        4. Handle
  //        5. Fragment
  //        6. 常用功能实现
- //          a. APP图标Logo
+ //          a. APP图标Logo                 OK
  //          b. 引导页
  //          c. 主页动态图或者视频显示
- //          d. 菜单侧滑
+ //          d. 菜单侧滑                    OK
  //          e. 图片轮播                    OK
  //          f. 下拉刷新、上拉加载
  //          g. 应用监控

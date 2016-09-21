@@ -41,11 +41,11 @@ public class LeftFragment extends Fragment {
         btnGetValue.setOnClickListener(new View.OnClickListener() {
                                            @Override
                                            public void onClick(View v) {
-                                               //获取Activity中输入值
-                                               EditText myEditText2 = (EditText) getActivity().findViewById(R.id.myEditText2);
-                                               Toast.makeText(getActivity(), "--->>" + myEditText2.getText().toString(), Toast.LENGTH_SHORT).show();
-                                           }
-                                       }
+               //获取Activity中文本框中的输入值
+               EditText myEditText2 = (EditText) getActivity().findViewById(R.id.myEditText2);
+               Toast.makeText(getActivity(), "--->>" + myEditText2.getText().toString(), Toast.LENGTH_SHORT).show();
+           }
+       }
         );
 
         //从Left Fragment传递值到Right Fragment

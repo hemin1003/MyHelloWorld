@@ -64,10 +64,7 @@ public class MiddleFragment extends ListFragment {
 
         FragmentManager manager = getActivity().getFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
-        RightFragment right = new RightFragment();
-        Bundle bundle = new Bundle();
-        bundle.putString("city", cities[position]);
-        right.setArguments(bundle);
+        RightFragment right = RightFragment.newInstance(cities[position]);
         transaction.replace(R.id.rightLayout, right, "right");
         transaction.addToBackStack("right");
         transaction.commit();
