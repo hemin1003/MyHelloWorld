@@ -1,122 +1,157 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="horizontal" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_weight="1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Test Animation"
-        android:id="@+id/btn_Animation"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Test Async"
-        android:id="@+id/btn_Async"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Test Intent"
+            android:id="@+id/btn_Intent"/>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Test Fragment"
-        android:id="@+id/btn_Fragment"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Test Animation"
+            android:id="@+id/btn_Animation"/>
 
-    <Button
-        android:text="Test Dialog"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_TestDailog"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Test Async"
+            android:id="@+id/btn_Async"/>
 
-    <Button
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Test Fragment"
+            android:id="@+id/btn_Fragment"/>
+
+        <Button
+            android:text="Test Dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_TestDailog"/>
+
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_weight="1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Test Gallery"
-        android:id="@+id/btn_Gallery"/>
-    <Button
+        android:layout_height="match_parent">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Test Gallery"
+            android:id="@+id/btn_Gallery"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Test WebView"
+            android:id="@+id/btn_WebView"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Test Sms Status"
+            android:id="@+id/btn_SmsStatus"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Test Call Info"
+            android:id="@+id/btn_CallInfo"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Test Battery"
+            android:id="@+id/btn_Battery"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Test Sms"
+            android:id="@+id/btn_Sms"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Test Newwork"
+            android:id="@+id/btn_Newwork"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Test LinearLayout"
+            android:id="@+id/btn_LinearLayout"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Test ImageView"
+            android:id="@+id/btn_ImageView"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_weight="1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Test WebView"
-        android:id="@+id/btn_WebView"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Test Sms Status"
-        android:id="@+id/btn_SmsStatus"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Test Call Info"
-        android:id="@+id/btn_CallInfo"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Test Battery"
-        android:id="@+id/btn_Battery"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Test Sms"
-        android:id="@+id/btn_Sms"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Test Newwork"
-        android:id="@+id/btn_Newwork"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Test LinearLayout"
-        android:id="@+id/btn_LinearLayout"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Test ImageView"
-        android:id="@+id/btn_ImageView"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10px"
-        android:text="Test Toast"
-        android:id="@+id/btn_toast"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Test Notification"
-        android:id="@+id/btn_notification"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Test Spinner"
-        android:id="@+id/btn_spinner"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Test SharedPreferences"
-        android:id="@+id/btn_shared"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Test Sqlite"
-        android:id="@+id/btn_sqlite"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Test Content Provider"
-        android:id="@+id/btn_contentProvider"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Test Linkfy"
-        android:id="@+id/btn_textLinkfy"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Test Vibrate"
-        android:id="@+id/btn_textVibrate"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Test Call"
-        android:id="@+id/btn_Call"/>
+        android:layout_height="match_parent">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10px"
+            android:text="Test Toast"
+            android:id="@+id/btn_toast"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Test Notification"
+            android:id="@+id/btn_notification"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Test Spinner"
+            android:id="@+id/btn_spinner"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Test SharedPreferences"
+            android:id="@+id/btn_shared"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Test Sqlite"
+            android:id="@+id/btn_sqlite"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Test Content Provider"
+            android:id="@+id/btn_contentProvider"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Test Linkfy"
+            android:id="@+id/btn_textLinkfy"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Test Vibrate"
+            android:id="@+id/btn_textVibrate"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Test Call"
+            android:id="@+id/btn_Call"/>
+
+    </LinearLayout>
 
 </LinearLayout>

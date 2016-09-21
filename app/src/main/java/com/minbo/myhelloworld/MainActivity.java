@@ -27,6 +27,7 @@ import com.minbo.myhelloworld.database.TestContentProvider;
 import com.minbo.myhelloworld.database.TestShared;
 import com.minbo.myhelloworld.database.TestSqlite;
 import com.minbo.myhelloworld.fragment.TestFragment;
+import com.minbo.myhelloworld.intent.TestIntent;
 import com.minbo.myhelloworld.layout.TestLinearLayout;
 import com.minbo.myhelloworld.network.TestGallery;
 import com.minbo.myhelloworld.network.TestNetwork;
@@ -373,6 +374,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, TestAnimation.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btn_Intent = (Button) findViewById(R.id.btn_Intent);
+        btn_Intent.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, TestIntent.class);
                 startActivity(intent);
             }
         });
