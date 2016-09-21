@@ -1,5 +1,6 @@
 package com.minbo.testdemo;
 
+import android.content.Intent;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.TextInputLayout;
@@ -13,6 +14,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TableLayout;
 import android.widget.Toast;
+
+import com.minbo.testdemo.fragment.TestListFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -71,5 +74,14 @@ public class MainActivity extends AppCompatActivity {
         myTabLayout.addTab(myTabLayout.newTab().setText("Tab111"));
         myTabLayout.addTab(myTabLayout.newTab().setText("Tab222"));
         myTabLayout.addTab(myTabLayout.newTab().setText("Tab333"));
+
+        Button btnListFragment = (Button) findViewById(R.id.btnListFragment);
+        btnListFragment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, TestListFragment.class);
+                startActivity(intent);
+            }
+        });
     }
 }
