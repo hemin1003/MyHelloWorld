@@ -47,7 +47,7 @@ import com.minbo.myhelloworld.widget.TestSpinner;
 /** Android Study Plan
  //        1. 相对布局                      OK
  //        2. Intent
- //        3. Service
+ //        3. Service, BroadCast
  //        4. Handle
  //        5. Fragment
  //        6. 常用功能实现
