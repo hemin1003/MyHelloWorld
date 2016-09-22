@@ -59,7 +59,8 @@
         <activity android:name=".widget.TestDailog" />
         <activity android:name=".async.TestAsync" />
         <activity android:name=".widget.TestAnimation" />
-        <activity android:name=".intent.TestIntent"></activity>
+        <activity android:name=".intent.TestIntent" />
+        <activity android:name=".intent.ResultActivity"></activity>
     </application>
 
 </manifest>

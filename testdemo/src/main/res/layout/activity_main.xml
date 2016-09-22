@@ -61,4 +61,10 @@
         android:text="Test List Fragment"
         android:id="@+id/btnListFragment"/>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Test Adapter Fragment"
+        android:id="@+id/btnAdapterFragment"/>
+
 </LinearLayout>

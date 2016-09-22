@@ -16,6 +16,7 @@ import android.widget.TableLayout;
 import android.widget.Toast;
 
 import com.minbo.testdemo.fragment.TestListFragment;
+import com.minbo.testdemo.fragmentadapter.TestAdapterFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -80,6 +81,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, TestListFragment.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btnAdapterFragment = (Button)findViewById(R.id.btnAdapterFragment);
+        btnAdapterFragment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, TestAdapterFragment.class);
                 startActivity(intent);
             }
         });

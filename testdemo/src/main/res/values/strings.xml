@@ -4,4 +4,5 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="text_button">Test123</string>
+    <string name="title_activity_test_adapter_fragment">TestAdapterFragment</string>
 </resources>
