@@ -1,4 +1,4 @@
-package com.minbo.testdemo.fragment;
+package com.minbo.testdemo.fragmentlist;
 
 
 import android.app.Fragment;

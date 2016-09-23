@@ -55,16 +55,54 @@
 
     </android.support.v4.view.ViewPager>
 
-    <Button
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Test List Fragment"
-        android:id="@+id/btnListFragment"/>
+        android:orientation="horizontal">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Test Adapter Fragment"
-        android:id="@+id/btnAdapterFragment"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Test List Fragment"
+                android:id="@+id/btnListFragment"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Test Adapter Fragment"
+                android:id="@+id/btnAdapterFragment"/>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Test Menu Fragment"
+                android:id="@+id/btnMenuFragment"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Test ActionBar Fragment"
+                android:id="@+id/btnActionBarFragment"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
 
 </LinearLayout>
