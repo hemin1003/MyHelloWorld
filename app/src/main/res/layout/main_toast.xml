@@ -12,6 +12,24 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="Test BroadCast"
+            android:id="@+id/btn_BroadCast"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Test Handle"
+            android:id="@+id/btn_Handle"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Test Service"
+            android:id="@+id/btn_Service"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:text="Test Intent"
             android:id="@+id/btn_Intent"/>
 

@@ -69,36 +69,6 @@ public class TestAsync extends AppCompatActivity {
                 }
             }
             return null;
-
-//            byte[] result = null;
-//            HttpClient httpClient = new DefaultHttpClient();
-//            HttpGet httpGet = new HttpGet((String)params[0]);
-//            byte[] data = new byte[1024];
-//            InputStream inputStream = null;
-//            long file_length = 0;
-//            long total_length = 0;
-//            int length = 0;
-//            ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-//            try {
-//                HttpResponse httpResponse = httpClient.execute(httpGet);
-//                file_length = httpResponse.getEntity().getContentLength();
-//                if (httpResponse.getStatusLine().getStatusCode() == 200) {
-//                    inputStream = httpResponse.getEntity().getContent();
-//                    while ((length = inputStream.read(data)) != -1) {
-//                        total_length += length;
-//                        int prograssBar = (int) (total_length
-//                                / (float) file_length * 100);
-//                        publishProgress(prograssBar);
-//                        outputStream.write(data, 0, length);
-//                    }
-//                }
-//            } catch (Exception e) {
-//                e.printStackTrace();
-//            } finally {
-//                httpClient.getConnectionManager().shutdown();
-//            }
-//            result = outputStream.toByteArray();
-//            return result;
         }
 
         @Override
@@ -110,12 +80,7 @@ public class TestAsync extends AppCompatActivity {
         @Override
         protected void onPostExecute(Object o) {
             super.onPostExecute(o);
-
             myImageView.setImageResource(R.drawable.girl);
-
-//            myImageView.setImageBitmap(BitmapFactory.decodeByteArray(o.toString().getBytes(), 0,
-//                    o.toString().getBytes().length));
-
             dialog.dismiss();
         }
     }

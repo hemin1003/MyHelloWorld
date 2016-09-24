@@ -1,11 +1,15 @@
 package com.minbo.myhelloworld.intent;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import com.minbo.myhelloworld.R;
+import com.readystatesoftware.systembartint.SystemBarTintManager;
 
 /**
  * Android开发中有时需要在应用中或进程间传递对象，下面详细介绍Intent使用Bundle传递对象的方法。
@@ -32,6 +36,17 @@ public class TestIntent extends AppCompatActivity{
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test_intent);
+        //状态栏透明
+        getSupportActionBar().hide();
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        // create our manager instance after the content view is set
+        SystemBarTintManager tintManager = new SystemBarTintManager(this);
+        // enable navigation bar tint
+        tintManager.setNavigationBarTintEnabled(true);
+        // set a custom tint color for all system bars
+        // set a custom navigation bar resource
+        tintManager.setNavigationBarTintColor(Color.parseColor("#19CAAD"));
         initViews();
     }
 
@@ -40,6 +55,40 @@ public class TestIntent extends AppCompatActivity{
         mSerBtn.setOnClickListener(onClickListener);
         mParBtn = (Button) findViewById(R.id.parcelable_btn);
         mParBtn.setOnClickListener(onClickListener);
+
+        Button btnWebview = (Button) findViewById(R.id.btnWebview);
+        btnWebview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //调用浏览器
+                Uri webViewUri = Uri.parse("http://www.baidu.com");
+                Intent intent = new Intent(Intent.ACTION_VIEW, webViewUri);
+                startActivity(intent);
+            }
+        });
+
+        Button btnSendSms = (Button) findViewById(R.id.btnSendSms);
+        btnSendSms.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //跳到发短信
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.putExtra("sms_body", "the sms text");
+                intent.setType("vnd.android-dir/mms-sms");
+                startActivity(intent);
+            }
+        });
+
+        Button btnUninstall = (Button) findViewById(R.id.btnUninstall);
+        btnUninstall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // 卸载应用
+                Uri uninstallUri = Uri.fromParts("package", "com.minbo.testdemo", null);
+                Intent intent = new Intent(Intent.ACTION_DELETE, uninstallUri);
+                startActivity(intent);
+            }
+        });
     }
 
     View.OnClickListener onClickListener = new View.OnClickListener() {

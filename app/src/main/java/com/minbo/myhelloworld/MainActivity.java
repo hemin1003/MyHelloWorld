@@ -23,10 +23,12 @@ import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.minbo.myhelloworld.async.TestAsync;
+import com.minbo.myhelloworld.broadcast.TestBroadCast;
 import com.minbo.myhelloworld.database.TestContentProvider;
 import com.minbo.myhelloworld.database.TestShared;
 import com.minbo.myhelloworld.database.TestSqlite;
 import com.minbo.myhelloworld.fragment.TestFragment;
+import com.minbo.myhelloworld.handle.TestHandle;
 import com.minbo.myhelloworld.intent.TestIntent;
 import com.minbo.myhelloworld.layout.TestLinearLayout;
 import com.minbo.myhelloworld.network.TestGallery;
@@ -38,6 +40,7 @@ import com.minbo.myhelloworld.phone.TestSmsStatus;
 import com.minbo.myhelloworld.phone.TestTouchToCall;
 import com.minbo.myhelloworld.phone.TestCallStatus;
 import com.minbo.myhelloworld.phone.TestVibrate;
+import com.minbo.myhelloworld.service.TestService;
 import com.minbo.myhelloworld.widget.TestAnimation;
 import com.minbo.myhelloworld.widget.TestDailog;
 import com.minbo.myhelloworld.widget.TestImageView;
@@ -46,10 +49,10 @@ import com.minbo.myhelloworld.widget.TestSpinner;
 
 /** Android Study Plan
  //        1. 相对布局                      OK
- //        2. Intent
- //        3. Service, BroadCast
- //        4. Handle
- //        5. Fragment
+ //        2. Intent                       OK
+ //        3. Service, BroadCast           OK
+ //        4. Handle                       OK
+ //        5. Fragment                     OK
  //        6. 常用功能实现
  //          a. APP图标Logo                 OK
  //          b. 引导页
@@ -65,7 +68,9 @@ import com.minbo.myhelloworld.widget.TestSpinner;
  //          m. 手势密码
  //          n. 百度地图
  //        7. 常用Android API使用（如取联系人, 取短信, 打电话, 发邮件, 播放音乐等）
- //        8. 常用第三方库使用（如gson, fastjson, 图标, okhttp等）
+ //        8. 常用第三方库使用
+             a. gson
+             b. okhttp
  */
 public class MainActivity extends AppCompatActivity {
     private int count = 0;
@@ -386,6 +391,35 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button btn_Service = (Button) findViewById(R.id.btn_Service);
+        btn_Service.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, TestService.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btn_Handle = (Button) findViewById(R.id.btn_Handle);
+        btn_Handle.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, TestHandle.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btn_BroadCast = (Button) findViewById(R.id.btn_BroadCast);
+        btn_BroadCast.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, TestBroadCast.class);
+                startActivity(intent);
+            }
+        });
+
+
 
 //        //第九种
 //        setContentView(R.layout.main_menu);

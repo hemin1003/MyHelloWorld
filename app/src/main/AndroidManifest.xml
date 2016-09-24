@@ -60,7 +60,23 @@
         <activity android:name=".async.TestAsync" />
         <activity android:name=".widget.TestAnimation" />
         <activity android:name=".intent.TestIntent" />
-        <activity android:name=".intent.ResultActivity"></activity>
+        <activity android:name=".intent.ResultActivity" />
+        <activity android:name=".service.TestService" />
+        <activity android:name=".handle.TestHandle" />
+        <activity android:name=".broadcast.TestBroadCast" />
+
+        <receiver
+            android:name=".broadcast.PackageReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter >
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <action android:name="android.intent.action.PACKAGE_REPLACED"/>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+
     </application>
 
 </manifest>

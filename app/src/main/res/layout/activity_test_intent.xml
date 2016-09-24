@@ -12,9 +12,10 @@
     tools:context="com.minbo.myhelloworld.intent.TestIntent">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello Intent 123"/>
+        android:text="Hello Intent 123"
+        android:background="#19CAAD"/>
 
     <Button
         android:id="@+id/serializable_btn"
@@ -27,5 +28,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Parcelable Object"/>
+
+    <Button
+        android:id="@+id/btnWebview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Intent 打开浏览器"/>
+
+    <Button
+        android:id="@+id/btnSendSms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Intent 跳到发短信"/>
+
+    <Button
+        android:id="@+id/btnUninstall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Intent 卸载应用"/>
 
 </LinearLayout>

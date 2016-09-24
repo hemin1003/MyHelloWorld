@@ -6,9 +6,6 @@ import android.content.Intent;
 
 import com.minbo.myhelloworld.phone.TestSmsStatus;
 
-/**
- * Created by Administrator on 2016/9/9.
- */
 public class BootReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
