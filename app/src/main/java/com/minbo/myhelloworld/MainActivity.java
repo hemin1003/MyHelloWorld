@@ -53,7 +53,8 @@ import com.minbo.myhelloworld.widget.TestSpinner;
  //        3. Service, BroadCast           OK
  //        4. Handle                       OK
  //        5. Fragment                     OK
- //        6. 常用功能实现
+ //        6. Viewpager
+ //        7. 常用功能实现
  //          a. APP图标Logo                 OK
  //          b. 引导页
  //          c. 主页动态图或者视频显示
@@ -67,8 +68,8 @@ import com.minbo.myhelloworld.widget.TestSpinner;
  //          k. SDCard操作
  //          m. 手势密码
  //          n. 百度地图
- //        7. 常用Android API使用（如取联系人, 取短信, 打电话, 发邮件, 播放音乐等）
- //        8. 常用第三方库使用
+ //        8. 常用Android API使用（如取联系人, 取短信, 打电话, 发邮件, 播放音乐等）
+ //        9. 常用第三方库使用
              a. gson
              b. okhttp
  */
