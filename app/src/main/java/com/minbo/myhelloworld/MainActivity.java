@@ -42,6 +42,7 @@ import com.minbo.myhelloworld.phone.TestCallStatus;
 import com.minbo.myhelloworld.phone.TestVibrate;
 import com.minbo.myhelloworld.service.TestService;
 import com.minbo.myhelloworld.vedio.TestVedio;
+import com.minbo.myhelloworld.viewpager.TestViewPager;
 import com.minbo.myhelloworld.widget.TestAnimation;
 import com.minbo.myhelloworld.widget.TestDailog;
 import com.minbo.myhelloworld.widget.TestImageView;
@@ -54,21 +55,22 @@ import com.minbo.myhelloworld.widget.TestSpinner;
  //        3. Service, BroadCast           OK
  //        4. Handle                       OK
  //        5. Fragment                     OK
- //        6. Viewpager
+ //        6. Viewpager                    OK
  //        7. 常用功能实现
  //          a. APP图标Logo                 OK
  //          b. 引导页
- //          c. 主页动态图或者视频显示
+ //          c. 主页动态图或者视频显示        OK
  //          d. 菜单侧滑                    OK
  //          e. 图片轮播                    OK
  //          f. 下拉刷新、上拉加载
- //          g. 应用监控
+ //          g. 应用监控                    OK
  //          h. 应用签名                    OK
  //          i. 应用安全
  //          j. 在线更新
  //          k. SDCard操作
  //          m. 手势密码
  //          n. 百度地图
+ //          i. APK优化瘦身
  //        8. 常用Android API使用（如取联系人, 取短信, 打电话, 发邮件, 播放音乐等）
  //        9. 常用第三方库使用
              a. gson
@@ -421,11 +423,21 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
         Button btn_Vedio = (Button) findViewById(R.id.btn_Vedio);
         btn_Vedio.setOnClickListener(new Button.OnClickListener(){
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, TestVedio.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btn_Viewpager = (Button) findViewById(R.id.btn_Viewpager);
+        btn_Viewpager.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, TestViewPager.class);
                 startActivity(intent);
             }
         });

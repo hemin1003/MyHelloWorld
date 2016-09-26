@@ -84,6 +84,9 @@
             android:name=".vedio.TestBasicActivity"
             android:label="@string/title_activity_test_basic"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <activity android:name=".viewpager.TestViewPager"></activity>
+
     </application>
 
 </manifest>
