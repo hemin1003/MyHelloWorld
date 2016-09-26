@@ -41,6 +41,7 @@ import com.minbo.myhelloworld.phone.TestTouchToCall;
 import com.minbo.myhelloworld.phone.TestCallStatus;
 import com.minbo.myhelloworld.phone.TestVibrate;
 import com.minbo.myhelloworld.service.TestService;
+import com.minbo.myhelloworld.vedio.TestVedio;
 import com.minbo.myhelloworld.widget.TestAnimation;
 import com.minbo.myhelloworld.widget.TestDailog;
 import com.minbo.myhelloworld.widget.TestImageView;
@@ -420,6 +421,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button btn_Vedio = (Button) findViewById(R.id.btn_Vedio);
+        btn_Vedio.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, TestVedio.class);
+                startActivity(intent);
+            }
+        });
 
 
 //        //第九种

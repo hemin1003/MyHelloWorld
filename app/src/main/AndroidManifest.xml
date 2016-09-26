@@ -69,14 +69,21 @@
             android:name=".broadcast.PackageReceiver"
             android:enabled="true"
             android:exported="true">
-            <intent-filter >
-                <action android:name="android.intent.action.PACKAGE_ADDED"/>
-                <action android:name="android.intent.action.PACKAGE_REPLACED"/>
-                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
-                <data android:scheme="package"/>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
             </intent-filter>
         </receiver>
 
+        <activity android:name=".vedio.TestVedio" />
+        <activity android:name=".vedio.MyVedio" />
+        <activity
+            android:name=".vedio.TestBasicActivity"
+            android:label="@string/title_activity_test_basic"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
