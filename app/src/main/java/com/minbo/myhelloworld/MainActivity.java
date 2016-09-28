@@ -56,9 +56,10 @@ import com.minbo.myhelloworld.widget.TestSpinner;
  //        4. Handle                       OK
  //        5. Fragment                     OK
  //        6. Viewpager                    OK
- //        7. 常用功能实现
+ //        7. 常用控件使用(9种)              OK
+ //        8. 常用功能实现
  //          a. APP图标Logo                 OK
- //          b. 引导页
+ //          b. 引导页                      OK
  //          c. 主页动态图或者视频显示        OK
  //          d. 菜单侧滑                    OK
  //          e. 图片轮播                    OK
@@ -71,10 +72,14 @@ import com.minbo.myhelloworld.widget.TestSpinner;
  //          m. 手势密码
  //          n. 百度地图
  //          i. APK优化瘦身
- //        8. 常用Android API使用（如取联系人, 取短信, 打电话, 发邮件, 播放音乐等）
- //        9. 常用第三方库使用
+ //        9. 常用Android API使用（如取联系人OK, 取短信, 打电话OK, 发邮件, 播放音乐等）
+ //        10. 常用第三方库使用
              a. gson
              b. okhttp
+             c. okio
+             d. retrofit
+             e. volley
+             f. eventbus
  */
 public class MainActivity extends AppCompatActivity {
     private int count = 0;
