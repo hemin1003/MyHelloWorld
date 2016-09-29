@@ -12,6 +12,30 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="Test Alarm"
+            android:id="@+id/btn_Alarm"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Test Newwork"
+            android:id="@+id/btn_Newwork"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Test Gson"
+            android:id="@+id/btn_Gson"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Test ListView"
+            android:id="@+id/btn_ListView"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:text="Test Vedio"
             android:id="@+id/btn_Vedio"/>
 
@@ -57,6 +81,16 @@
             android:text="Test Async"
             android:id="@+id/btn_Async"/>
 
+
+
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -68,14 +102,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/btn_TestDailog"/>
-
-    </LinearLayout>
-
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="vertical"
-        android:layout_weight="1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
         <Button
             android:layout_width="match_parent"
@@ -108,11 +134,6 @@
             android:layout_height="wrap_content"
             android:text="Test Sms"
             android:id="@+id/btn_Sms"/>
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Test Newwork"
-            android:id="@+id/btn_Newwork"/>
 
         <Button
             android:layout_width="match_parent"

@@ -83,10 +83,11 @@
         <activity
             android:name=".vedio.TestBasicActivity"
             android:label="@string/title_activity_test_basic"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-
-        <activity android:name=".viewpager.TestViewPager"></activity>
-
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".viewpager.TestViewPager" />
+        <activity android:name=".widget.TestListview" />
+        <activity android:name=".gson.TestGson" />
+        <activity android:name=".Alarm.TestAlarm"></activity>
     </application>
 
 </manifest>

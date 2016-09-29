@@ -41,6 +41,7 @@ public class TestNetwork extends AppCompatActivity {
                 Toast.makeText(TestNetwork.this, "Line1Number=" + telMgr.getLine1Number()
                         + ", NetworkOperatorName=" + telMgr.getNetworkOperatorName(), Toast.LENGTH_SHORT).show();
             }
+
         }else{
             ContentResolver cr = this.getContentResolver();
             String bluetooth = android.provider.Settings.System.getString(cr, Settings.Global.BLUETOOTH_ON);

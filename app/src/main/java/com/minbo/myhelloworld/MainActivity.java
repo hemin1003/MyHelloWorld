@@ -22,12 +22,14 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import com.minbo.myhelloworld.Alarm.TestAlarm;
 import com.minbo.myhelloworld.async.TestAsync;
 import com.minbo.myhelloworld.broadcast.TestBroadCast;
 import com.minbo.myhelloworld.database.TestContentProvider;
 import com.minbo.myhelloworld.database.TestShared;
 import com.minbo.myhelloworld.database.TestSqlite;
 import com.minbo.myhelloworld.fragment.TestFragment;
+import com.minbo.myhelloworld.gson.TestGson;
 import com.minbo.myhelloworld.handle.TestHandle;
 import com.minbo.myhelloworld.intent.TestIntent;
 import com.minbo.myhelloworld.layout.TestLinearLayout;
@@ -47,6 +49,7 @@ import com.minbo.myhelloworld.widget.TestAnimation;
 import com.minbo.myhelloworld.widget.TestDailog;
 import com.minbo.myhelloworld.widget.TestImageView;
 import com.minbo.myhelloworld.widget.TestLinkfy;
+import com.minbo.myhelloworld.widget.TestListview;
 import com.minbo.myhelloworld.widget.TestSpinner;
 
 /** Android Study Plan
@@ -361,7 +364,8 @@ public class MainActivity extends AppCompatActivity {
         btn_Fragment.setOnClickListener(new Button.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, TestFragment.class); startActivity(intent);
+                Intent intent = new Intent(MainActivity.this, TestFragment.class);
+                startActivity(intent);
             }
         });
 
@@ -446,6 +450,34 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button btn_ListView = (Button) findViewById(R.id.btn_ListView);
+        btn_ListView.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, TestListview.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btn_Gson = (Button) findViewById(R.id.btn_Gson);
+        btn_Gson.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, TestGson.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btn_Alarm = (Button) findViewById(R.id.btn_Alarm);
+        btn_Alarm.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, TestAlarm.class);
+                startActivity(intent);
+            }
+        });
+
 
 
 //        //第九种
