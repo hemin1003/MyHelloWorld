@@ -88,7 +88,9 @@
         <activity android:name=".widget.TestListview" />
         <activity android:name=".gson.TestGson" />
         <activity android:name=".Alarm.TestAlarm" />
-        <activity android:name=".layout.TestScrollView"></activity>
+        <activity android:name=".layout.TestScrollView" />
+        <activity android:name=".layout.TestHttpContent" />
+        <activity android:name=".layout.TestFileContent"></activity>
     </application>
 
 </manifest>
