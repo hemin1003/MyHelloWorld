@@ -12,6 +12,12 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="Test ScrollView"
+            android:id="@+id/btn_ScrollView"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:text="Test Alarm"
             android:id="@+id/btn_Alarm"/>
 
@@ -69,6 +75,14 @@
             android:text="Test Intent"
             android:id="@+id/btn_Intent"/>
 
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -80,16 +94,6 @@
             android:layout_height="wrap_content"
             android:text="Test Async"
             android:id="@+id/btn_Async"/>
-
-
-
-    </LinearLayout>
-
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="vertical"
-        android:layout_weight="1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
         <Button
             android:layout_width="match_parent"
@@ -140,11 +144,7 @@
             android:layout_height="wrap_content"
             android:text="Test LinearLayout"
             android:id="@+id/btn_LinearLayout"/>
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Test ImageView"
-            android:id="@+id/btn_ImageView"/>
+
 
     </LinearLayout>
 
@@ -154,6 +154,12 @@
         android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Test ImageView"
+            android:id="@+id/btn_ImageView"/>
 
         <Button
             android:layout_width="match_parent"

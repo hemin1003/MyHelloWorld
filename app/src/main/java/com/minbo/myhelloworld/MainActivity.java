@@ -33,6 +33,7 @@ import com.minbo.myhelloworld.gson.TestGson;
 import com.minbo.myhelloworld.handle.TestHandle;
 import com.minbo.myhelloworld.intent.TestIntent;
 import com.minbo.myhelloworld.layout.TestLinearLayout;
+import com.minbo.myhelloworld.layout.TestScrollView;
 import com.minbo.myhelloworld.network.TestGallery;
 import com.minbo.myhelloworld.network.TestNetwork;
 import com.minbo.myhelloworld.network.TestWebView;
@@ -478,7 +479,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        Button btn_ScrollView = (Button) findViewById(R.id.btn_ScrollView);
+        btn_ScrollView.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, TestScrollView.class);
+                startActivity(intent);
+            }
+        });
 
 //        //第九种
 //        setContentView(R.layout.main_menu);
