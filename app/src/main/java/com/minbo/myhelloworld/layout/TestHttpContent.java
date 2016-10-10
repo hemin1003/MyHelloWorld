@@ -38,13 +38,8 @@ public class TestHttpContent extends AppCompatActivity {
         progressDialog.setMessage("Loading...");
 
         try{
-
             String path = "http://58.67.219.248/besthainan-web/wechat/a.html";
-            String result = (String)(new MyAsync().execute(path).get());
-            textView = new TextView(this);
-            //设置过滤点html标签显示
-            textView.setText(Html.fromHtml(result));
-            myLinear.addView(textView);
+            new MyAsync().execute(path);
 
         }catch (Exception e){
             e.printStackTrace();
@@ -52,6 +47,7 @@ public class TestHttpContent extends AppCompatActivity {
     }
 
     class MyAsync extends AsyncTask {
+        private String result;
 
         @Override
         protected void onPreExecute() {
@@ -63,7 +59,7 @@ public class TestHttpContent extends AppCompatActivity {
         protected Object doInBackground(Object[] params) {
             System.out.println("params[0]=" + params[0]);
             // 设置访问的Web站点
-            String result = HttpUtils.sendHttpClientPost((String) params[0], null, "utf-8");
+            result = HttpUtils.sendHttpClientPost((String) params[0], null, "utf-8");
             return result;
         }
 
@@ -71,6 +67,12 @@ public class TestHttpContent extends AppCompatActivity {
         protected void onPostExecute(Object o) {
             super.onPostExecute(o);
             progressDialog.dismiss();
+            //设置文本域
+            textView = new TextView(TestHttpContent.this);
+            //设置过滤点html标签显示
+            textView.setText(Html.fromHtml(result));
+            myLinear.addView(textView);
+
         }
     }
 }
