@@ -78,7 +78,7 @@ import com.minbo.myhelloworld.widget.TestSpinner;
  //          i. APK优化瘦身
  //        9. 常用Android API使用（如取联系人OK, 取短信, 打电话OK, 发邮件, 播放音乐等）
  //        10. 常用第三方库使用
-             a. gson
+             a. gson                       OK
              b. okhttp
              c. okio
              d. retrofit

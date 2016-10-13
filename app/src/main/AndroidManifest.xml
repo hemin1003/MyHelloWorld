@@ -90,7 +90,8 @@
         <activity android:name=".Alarm.TestAlarm" />
         <activity android:name=".layout.TestScrollView" />
         <activity android:name=".layout.TestHttpContent" />
-        <activity android:name=".layout.TestFileContent"></activity>
+        <activity android:name=".layout.TestFileContent" />
+        <activity android:name=".widget.TestDpDis"></activity>
     </application>
 
 </manifest>
