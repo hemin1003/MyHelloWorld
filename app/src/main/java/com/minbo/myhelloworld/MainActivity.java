@@ -52,6 +52,8 @@ import com.minbo.myhelloworld.widget.TestImageView;
 import com.minbo.myhelloworld.widget.TestLinkfy;
 import com.minbo.myhelloworld.widget.TestListview;
 import com.minbo.myhelloworld.widget.TestSpinner;
+import com.minbo.myhelloworld.widget.ToastUtils;
+import com.minbo.myhelloworld.widget.ToastUtils2;
 
 /** Android Study Plan
  //        1. 相对布局                      OK
@@ -213,7 +215,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 setTitle("使用Toast");
-                Toast.makeText(MainActivity.this, "Test", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(MainActivity.this, "Test", Toast.LENGTH_SHORT).show();
+                //ToastUtils.showToast(MainActivity.this, "Test");
+                ToastUtils2.showToast(MainActivity.this, "Test");
             }
         });
 
